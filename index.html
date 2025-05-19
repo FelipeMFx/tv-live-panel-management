@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="common.css" />
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen">
+  <div class="flex min-h-screen">
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col">
+      <header class="flex items-center justify-between px-4 py-2 bg-white border-b">
+        <div class="text-sm font-semibold">
+          Painel <span class="uppercase font-bold">AO VIVO</span>
+        </div>
+        <div class="text-sm font-semibold">
+          TV: <span class="font-bold">03/04/2025</span> | Usuário: <span class="font-bold">Guido Possi</span>
+        </div>
+        <div class="flex items-center gap-2">
+                    <button class="bg-red-400 hover:bg-red-500 text-white text-xs font-medium px-3 py-1 rounded">
+                        Finalizar TV de hoje
+                    </button>
+                    <a href="editar-imagens.html" class="bg-blue-500 hover:bg-blue-600 text-white text-xs font-medium px-3 py-1 rounded inline-flex items-center gap-1">
+                        <i class="fas fa-cog mr-1"></i>Configurações
+                    </a>
+        </div>
+      </header>
+
+      <nav class="flex flex-wrap gap-2 px-4 py-2 bg-white border-b">
+        <a href="index.html" class="bg-green-400 text-white rounded px-4 py-1.5 text-sm font-semibold hover:bg-green-500">
+          Sorteio NF Premiada
+        </a>
+        <a href="premio-bola-maior.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+          Prêmio Extra
+        </a>
+        <a href="palpite-premiado.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+          Palpite Premiado
+        </a>
+        <a href="audiencia.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+          Audiência
+        </a>
+        <a href="fotos-comentarios.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+          Fotos / Comentários
+        </a>
+        <a href="sorteios.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+          Sorteio GRV/GRR/Festão
+        </a>
+        <a href="premiacoes.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+          Premiações
+        </a>
+      </nav>
+
+      <main class="flex-1 p-4 overflow-auto">
+        <div class="content-container content-wrapper">
+          <section>
+            <div class="flex items-center gap-3 mb-6">
+              <button class="bg-red-400 hover:bg-red-500 text-white text-xs font-semibold px-4 py-1.5 rounded">
+                Finalizar 1º Sorteio
+              </button>
+              <button class="bg-green-400 text-white text-xs font-semibold px-4 py-1.5 rounded">
+                1º Sorteio
+              </button>
+              <button class="bg-gray-200 text-gray-700 text-xs font-semibold px-4 py-1.5 rounded">
+                2º Sorteio
+              </button>
+              <button class="bg-gray-200 text-gray-700 text-xs font-semibold px-4 py-1.5 rounded">
+                3º Sorteio
+              </button>
+              <div class="ml-auto text-xs flex flex-wrap items-center gap-3">
+                <span class="font-semibold">Números sorteados:</span>
+                <div class="flex gap-1 flex-wrap">
+                  <div class="w-7 h-7 border border-gray-400 rounded flex items-center justify-center font-mono font-bold">4</div>
+                  <div class="w-7 h-7 border border-gray-400 rounded flex items-center justify-center font-mono font-bold">3</div>
+                  <div class="w-7 h-7 border border-gray-400 rounded flex items-center justify-center font-mono font-bold">2</div>
+                  <div class="w-7 h-7 border border-gray-400 rounded flex items-center justify-center font-mono font-bold">1</div>
+                </div>
+                <span class="w-full mt-2">Total: 10 notas, 8 Centena / 2 Milhar</span>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <h2 class="text-lg font-semibold mb-2">
+                Batidas
+                <span class="text-blue-600 font-normal">(Centena=2 / <span class="text-yellow-600">Milhar</span>=1)</span>
+              </h2>
+              <div class="overflow-x-auto max-h-[180px] scrollbar-thin border border-gray-300 rounded-sm">
+                <table class="min-w-full text-sm border-collapse bg-white">
+                  <thead class="bg-gray-100 sticky top-0">
+                    <tr>
+                      <th class="border border-gray-300 px-2 py-1.5 w-8 text-left">On</th>
+                      <th class="border border-gray-300 px-2 py-1.5 text-left">Nome Fantasia</th>
+                      <th class="border border-gray-300 px-2 py-1.5 text-left">Razão Social</th>
+                      <th class="border border-gray-300 px-2 py-1.5 text-left">NF</th>
+                      <th class="border border-gray-300 px-2 py-1.5 text-left">Unidade</th>
+                      <th class="border border-gray-300 px-2 py-1.5 text-left">Cidade/UF</th>
+                      <th class="border border-gray-300 px-2 py-1.5 text-left">Batida</th>
+                      <th class="border border-gray-300 px-2 py-1.5 text-left">Inadimplente</th>
+                      <th class="border border-gray-300 px-2 py-1.5 text-left">CNPJ</th>
+                      <th class="border border-gray-300 px-2 py-1.5 text-left">Contato</th>
+                      <th class="border border-gray-300 px-2 py-1.5 text-left">Contato "TV"</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-white">
+                      <td class="border border-gray-200 px-2 py-1 text-center">
+                        <div class="w-3 h-3 rounded-full bg-green-500 mx-auto"></div>
+                      </td>
+                      <td class="border border-gray-200 px-2 py-1">Braga Araújo</td>
+                      <td class="border border-gray-200 px-2 py-1">Comercio de Insumos</td>
+                      <td class="border border-gray-200 px-2 py-1 text-blue-600 font-semibold">9321</td>
+                      <td class="border border-gray-200 px-2 py-1">Sete Lagoas</td>
+                      <td class="border border-gray-200 px-2 py-1">Pirapora Nossa/MG</td>
+                      <td class="border border-gray-200 px-2 py-1 text-center">16:32</td>
+                      <td class="border border-gray-200 px-2 py-1 text-center">—</td>
+                      <td class="border border-gray-200 px-2 py-1">07634924...</td>
+                      <td class="border border-gray-200 px-2 py-1">(32) 9 9563-9130</td>
+                      <td class="border border-gray-200 px-2 py-1">(32) 9 9563-9130</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-200 px-2 py-1 text-center">
+                        <div class="w-3 h-3 rounded-full bg-gray-400 mx-auto"></div>
+                      </td>
+                      <td class="border border-gray-200 px-2 py-1">NULL</td>
+                      <td class="border border-gray-200 px-2 py-1">Agro Revenda LTDA</td>
+                      <td class="border border-gray-200 px-2 py-1 text-blue-600 font-semibold">0321</td>
+                      <td class="border border-gray-200 px-2 py-1">Paulínia</td>
+                      <td class="border border-gray-200 px-2 py-1">São Paulo/SP</td>
+                      <td class="border border-gray-200 px-2 py-1 text-center">16:32</td>
+                      <td class="border border-gray-200 px-2 py-1 text-center">—</td>
+                      <td class="border border-gray-200 px-2 py-1">07634924...</td>
+                      <td class="border border-gray-200 px-2 py-1">(19) 9 9563-9130</td>
+                      <td class="border border-gray-200 px-2 py-1">(19) 9 9563-9130</td>
+                    </tr>
+                    <tr class="bg-white">
+                      <td class="border border-gray-200 px-2 py-1 text-center">
+                        <div class="w-3 h-3 rounded-full bg-gray-400 mx-auto"></div>
+                      </td>
+                      <td class="border border-gray-200 px-2 py-1">Sag Agricola EIRELI</td>
+                      <td class="border border-gray-200 px-2 py-1">Sag Agricola EIRELI</td>
+                      <td class="border border-gray-200 px-2 py-1 text-yellow-600 font-semibold">4321</td>
+                      <td class="border border-gray-200 px-2 py-1">Carazinho</td>
+                      <td class="border border-gray-200 px-2 py-1">Rio Grande do Sul/RS</td>
+                      <td class="border border-gray-200 px-2 py-1 text-center">16:32</td>
+                      <td class="border border-gray-200 px-2 py-1 text-center">—</td>
+                      <td class="border border-gray-200 px-2 py-1">07634924...</td>
+                      <td class="border border-gray-200 px-2 py-1">(12) 9 9563-91</td>
+                      <td class="border border-gray-200 px-2 py-1">(12) 9 9563-91</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-lg font-semibold mb-2">
+                Possibilidades <span class="text-gray-600 font-normal">(+7)</span>
+              </h2>
+              <div class="overflow-x-auto max-h-[180px] scrollbar-thin border border-gray-200 rounded-sm">
+                <table class="min-w-full text-sm border-collapse bg-white">
+                  <thead class="bg-gray-50 sticky top-0">
+                    <tr>
+                      <th class="border border-gray-200 px-2 py-1.5 w-8">On</th>
+                      <th class="border border-gray-200 px-2 py-1.5">Nome Fantasia</th>
+                      <th class="border border-gray-200 px-2 py-1.5">Razão Social</th>
+                      <th class="border border-gray-200 px-2 py-1.5">NF</th>
+                      <th class="border border-gray-200 px-2 py-1.5">Unidade</th>
+                      <th class="border border-gray-200 px-2 py-1.5">Cidade/UF</th>
+                      <th class="border border-gray-200 px-2 py-1.5">Batida</th>
+                      <th class="border border-gray-200 px-2 py-1.5">Inadimplente</th>
+                      <th class="border border-gray-200 px-2 py-1.5">CNPJ</th>
+                      <th class="border border-gray-200 px-2 py-1.5">Contato</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-white">
+                      <td class="border border-gray-200 px-2 py-1 text-center">
+                        <div class="w-3 h-3 rounded-full bg-green-500 mx-auto"></div>
+                      </td>
+                      <td class="border border-gray-200 px-2 py-1">Agrosul Agricola</td>
+                      <td class="border border-gray-200 px-2 py-1">Agrosul Agricola LTDA</td>
+                      <td class="border border-gray-200 px-2 py-1 text-blue-600 font-semibold">0321</td>
+                      <td class="border border-gray-200 px-2 py-1">Petrolina</td>
+                      <td class="border border-gray-200 px-2 py-1">Rio Grande do Sul/RS</td>
+                      <td class="border border-gray-200 px-2 py-1 text-center">16:32</td>
+                      <td class="border border-gray-200 px-2 py-1 text-center">—</td>
+                      <td class="border border-gray-200 px-2 py-1">07634924...</td>
+                      <td class="border border-gray-200 px-2 py-1">(19) 9 9563-9130</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-200 px-2 py-1 text-center">
+                        <div class="w-3 h-3 rounded-full bg-red-500 mx-auto"></div>
+                      </td>
+                      <td class="border border-gray-200 px-2 py-1.5 text-red-600">Casa da Lavoura de Campos Gerais</td>
+                      <td class="border border-gray-200 px-2 py-1.5 text-red-600">Casa da Lavoura de Campos Gerais</td>
+                      <td class="border border-gray-200 px-2 py-1.5 text-yellow-600 font-semibold">4321</td>
+                      <td class="border border-gray-200 px-2 py-1.5 text-red-600">Sete Lagoas</td>
+                      <td class="border border-gray-200 px-2 py-1.5 text-red-600">Rio Grande do Sul/RS</td>
+                      <td class="border border-gray-200 px-2 py-1.5 text-center text-red-600">16:32</td>
+                      <td class="border border-gray-200 px-2 py-1.5 text-center text-red-600">845,39</td>
+                      <td class="border border-gray-200 px-2 py-1.5 text-red-600">07634924...</td>
+                      <td class="border border-gray-200 px-2 py-1.5 text-red-600">(19) 9 9563-9130</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+      <div class="right-panel-content">
+        <div class="right-panel-inner">
+          <div class="flex flex-col space-y-4">
+            <h2 class="text-sm font-semibold">Painel Exibir: NF Premiada/Extra/Fotos</h2>
+            <a href="editar-imagens.html" class="btn-edit-bg">
+              Editar imagens de fundo
+            </a>
+          </div>
+
+          <hr class="my-6 border-gray-300">
+          <div class="grid grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="text-sm mb-2 text-center">Sorteio</p>
+              <div class="bg-white rounded-lg p-2 text-center">
+                <div class="grid grid-cols-4 text-4xl font-mono text-orange-500">
+                  <span>4</span>
+                  <span>3</span>
+                  <span>2</span>
+                  <span>1</span>
+                    </div>                   
+                </div>
+            </div>
+            <div>
+              <p class="text-sm mb-2 text-center">Neutro</p>
+              <div class="bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg p-2 flex items-center justify-center">
+                <img src="https://via.placeholder.com/120x60?text=TV+AgRoss" alt="TV AgRoss" class="max-w-full" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Sorteio Sections -->
+          <div class="space-y-4">
+            <div>
+                            <h3 class="text-sm font-semibold mb-2 text-center">1º Sorteio</h3>
+              <div class="grid grid-cols-3 gap-2">
+                <div class="bg-white p-2 rounded border text-center text-xs">
+                  <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                  <p>Prêmio Centena</p>
+                </div>
+                <div class="bg-white p-2 rounded border text-center text-xs">
+                  <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                  <p>Prêmio Milhar</p>
+                </div>
+                <div class="bg-white p-2 rounded border text-center text-xs">
+                  <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                  <p>Prêmio Extra</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+                            <h3 class="text-sm font-semibold mb-2 text-center">2º Sorteio</h3>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="bg-white p-2 rounded border text-center text-xs">
+                  <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                </div>
+                <div class="bg-white p-2 rounded border text-center text-xs">
+                  <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+                            <h3 class="text-sm font-semibold mb-2 text-center">3º Sorteio</h3>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="bg-white p-2 rounded border text-center text-xs">
+                  <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                </div>
+                <div class="bg-white p-2 rounded border text-center text-xs">
+                  <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fotos & Comentários -->
+          <div class="flex gap-2 mt-4">
+            <button class="flex-1 bg-green-400 hover:bg-green-500 text-white text-sm font-semibold py-1 px-2 rounded relative">
+              Fotos
+              <span class="absolute -top-1 -right-1 bg-gray-700 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">4</span>
+            </button>
+            <button class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 text-sm font-semibold py-1 px-2 rounded relative">
+              Comentários
+              <span class="absolute -top-1 -right-1 bg-gray-700 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">7</span>
+            </button>
+          </div>
+
+          <!-- Fotos Gallery -->
+          <div class="mt-4 px-2">
+            <div class="grid grid-cols-3 gap-2">
+              <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Exemplo 1" class="rounded object-cover w-full h-16">
+              <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" alt="Exemplo 2" class="rounded object-cover w-full h-16">
+              <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Exemplo 3" class="rounded object-cover w-full h-16">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
