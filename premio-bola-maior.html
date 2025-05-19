@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="common.css" />
+    <style>
+        .trophy-icon {
+            color: #FFD700;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen">
+    <div class="flex min-h-screen">
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Header -->
+            <header class="flex items-center justify-between px-4 py-2 bg-white border-b">
+                <div class="text-sm font-semibold">
+                    Painel <span class="uppercase font-bold">AO VIVO</span>
+                </div>
+                <div class="text-sm font-semibold">
+                    TV: <span class="font-bold">03/04/2025</span> | Usuário: <span class="font-bold">Guido Possi</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button class="bg-red-400 hover:bg-red-500 text-white text-xs font-medium px-3 py-1 rounded">
+                        Finalizar TV de hoje
+                    </button>
+                    <a href="editar-imagens.html" class="bg-blue-500 hover:bg-blue-600 text-white text-xs font-medium px-3 py-1 rounded inline-flex items-center gap-1">
+                        <i class="fas fa-cog mr-1"></i>Configurações
+                    </a>
+                </div>
+            </header>
+
+            <!-- Navigation -->
+            <nav class="flex flex-wrap gap-2 px-4 py-2 bg-white border-b">
+                <a href="index.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Sorteio NF Premiada
+                </a>
+                <a href="premio-bola-maior.html" class="bg-green-400 text-white rounded px-4 py-1.5 text-sm font-semibold hover:bg-green-500">
+                    Prêmio Extra
+                </a>
+                <a href="palpite-premiado.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Palpite Premiado
+                </a>
+                <a href="audiencia.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Audiência
+                </a>
+                <a href="fotos-comentarios.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Fotos / Comentários
+                </a>
+                <a href="sorteios.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Sorteio GRV/GRR/Festão
+                </a>
+                <a href="premiacoes.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Premiações
+                </a>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="flex-1 p-4 overflow-auto">
+                <div class="content-container content-wrapper">
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <h2 class="text-sm font-semibold">Batidas Prêmio Extra</h2>
+                                <div class="flex gap-2">
+                                    <button class="bg-green-400 text-white text-xs font-semibold px-4 py-1.5 rounded">
+                                        1º Sorteio
+                                    </button>
+                                    <button class="bg-gray-200 text-gray-700 text-xs font-semibold px-4 py-1.5 rounded">
+                                        2º Sorteio
+                                    </button>
+                                    <button class="bg-gray-200 text-gray-700 text-xs font-semibold px-4 py-1.5 rounded">
+                                        3º Sorteio
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overflow-x-auto max-h-[400px] scrollbar-thin">
+                                <table class="min-w-full text-sm border-collapse bg-white">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="border border-gray-200 px-2 py-1.5 text-xs font-medium text-gray-500 text-left">On</th>
+                                        <th class="border border-gray-200 px-2 py-1.5 text-xs font-medium text-gray-500 text-left">Nome Fantasia</th>
+                                        <th class="border border-gray-200 px-2 py-1.5 text-xs font-medium text-gray-500 text-left">Razão Social</th>
+                                        <th class="border border-gray-200 px-2 py-1.5 text-xs font-medium text-gray-500 text-left">Extra</th>
+                                        <th class="border border-gray-200 px-2 py-1.5 text-xs font-medium text-gray-500 text-left">Centena</th>
+                                        <th class="border border-gray-200 px-2 py-1.5 text-xs font-medium text-gray-500 text-left">Milhar</th>
+                                        <th class="border border-gray-200 px-2 py-1.5 text-xs font-medium text-gray-500 text-left">NF</th>
+                                        <th class="border border-gray-200 px-2 py-1.5 text-xs font-medium text-gray-500 text-left">Unidade</th>
+                                        <th class="border border-gray-200 px-2 py-1.5 text-xs font-medium text-gray-500 text-left">Cidade/UF</th>
+                                        <th class="border border-gray-200 px-2 py-1.5 text-xs font-medium text-gray-500 text-left">Batida</th>
+                                        <th class="border border-gray-200 px-2 py-1.5 text-xs font-medium text-gray-500 text-left">Inadimp</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-2 py-1 text-center">
+                                            <div class="w-2.5 h-2.5 rounded-full bg-green-500 mx-auto"></div>
+                                        </td>
+                                        <td class="border border-gray-200 px-2 py-1">Braga Araújo</td>
+                                        <td class="border border-gray-200 px-2 py-1">Comercio de Insum...</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center">0</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center">0</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center">0</td>
+                                        <td class="border border-gray-200 px-2 py-1">9321</td>
+                                        <td class="border border-gray-200 px-2 py-1">Sete Lagoas</td>
+                                        <td class="border border-gray-200 px-2 py-1">Pirapora Nossa/MG</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center">16:32</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center">—</td>
+                                    </tr>
+                                    <tr class="bg-gray-50 hover:bg-gray-100">
+                                        <td class="border border-gray-200 px-2 py-1 text-center">
+                                            <div class="w-2.5 h-2.5 rounded-full bg-green-500 mx-auto"></div>
+                                        </td>
+                                        <td class="border border-gray-200 px-2 py-1">NULL</td>
+                                        <td class="border border-gray-200 px-2 py-1">Agro Revenda LTDA</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center">0</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center">0</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center">0</td>
+                                        <td class="border border-gray-200 px-2 py-1">0321</td>
+                                        <td class="border border-gray-200 px-2 py-1">Paulínia</td>
+                                        <td class="border border-gray-200 px-2 py-1">São Paulo/SP</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center">16:32</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center">—</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="border border-gray-200 px-2 py-1 text-center">
+                                            <div class="w-2.5 h-2.5 rounded-full bg-red-500 mx-auto"></div>
+                                        </td>
+                                        <td class="border border-gray-200 px-2 py-1 text-red-600">Casa da Lavoura</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-red-600">Casa da Lavoura de Campos Ge...</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center text-red-600">0</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center text-red-600">0</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center text-red-600">0</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-red-600">4121</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-red-600">Sete Lagoas</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-red-600">Rio Grande do Sul/RS</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center text-red-600">16:32</td>
+                                        <td class="border border-gray-200 px-2 py-1 text-center text-red-600">845,39</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <button onclick="openPremioModal()" class="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors shadow-lg">
+                            Ver Prêmio Extra
+                        </button>
+                    </div>
+
+                    <!-- Modal Premio Bola Maior -->
+                    <div id="premioModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 overflow-y-auto">
+                        <div class="min-h-screen px-4 text-center">
+                            <div class="inline-block align-middle bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+                                <div class="bg-gray-900 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                                    <div class="text-center mb-8 bg-gray-900 bg-opacity-60 p-6 rounded-xl">
+                                        <div class="flex justify-between items-center mb-4">
+                                            <div class="flex-1"></div>
+                                            <i class="fas fa-trophy trophy-icon"></i>
+                                            <button onclick="closePremioModal()" class="text-gray-400 hover:text-gray-300">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <h1 class="text-4xl font-bold text-white mb-2">Prêmio Bola Maior</h1>
+                                        <h2 class="text-2xl font-bold text-green-400 uppercase tracking-wider">CENTENA</h2>
+                                    </div>
+                                    <hr class="my-6 border-gray-300">
+
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                        <div class="border-2 border-green-500 rounded-lg p-6 bg-gray-800 bg-opacity-90 hover:bg-opacity-100 transition-all">
+                                            <h3 class="text-xl font-bold text-green-400 mb-4">1ª Batida</h3>
+                                            <div class="space-y-2">
+                                                <h4 class="text-2xl font-bold text-white">Braga Araújo</h4>
+                                                <p class="text-gray-300">
+                                                    Pirapora Nossa/MG<br>
+                                                    UNIDADE: Sete Lagoas
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-2 border-green-500 rounded-lg p-6 bg-gray-800 bg-opacity-90 hover:bg-opacity-100 transition-all">
+                                            <h3 class="text-xl font-bold text-green-400 mb-4">2ª Batida</h3>
+                                            <div class="space-y-2">
+                                                <h4 class="text-2xl font-bold text-white">Agro Revenda LTDA</h4>
+                                                <p class="text-gray-300">
+                                                    SÃO PAULO-SP<br>
+                                                    UNIDADE: Paulínia
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-center gap-4 mt-8">
+                                        <button class="px-6 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors">
+                                            Exibir
+                                        </button>
+                                        <button class="px-6 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors">
+                                            Minimizar
+                                        </button>
+                                        <button class="px-6 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 transition-colors">
+                                            Editar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <div class="right-panel-content">
+                <div class="right-panel-inner">
+                    <div class="flex flex-col space-y-4">
+                        <h2 class="text-sm font-semibold">Painel Exibir: NF Premiada/Extra/Fotos</h2>
+                        <a href="editar-imagens.html" class="btn-edit-bg">
+                            Editar imagens de fundo
+                        </a>
+                    </div>
+
+                    <hr class="my-6 border-gray-300">
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <p class="text-sm mb-2 text-center">Sorteio</p>
+                            <div class="bg-white rounded-lg p-2 text-center">
+                                <div class="grid grid-cols-4 text-4xl font-mono text-orange-500">
+                                    <span>4</span>
+                                    <span>3</span>
+                                    <span>2</span>
+                                    <span>1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm mb-2 text-center">Neutro</p>
+                            <div class="bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg p-2 flex items-center justify-center">
+                                <img src="https://via.placeholder.com/120x60?text=TV+AgRoss" alt="TV AgRoss" class="max-w-full" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sorteio Sections -->
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-sm font-semibold mb-2 text-center">1º Sorteio</h3>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                    <p>Prêmio Centena</p>
+                                </div>
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                    <p>Prêmio Milhar</p>
+                                </div>
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                    <p>Prêmio Extra</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-sm font-semibold mb-2 text-center">2º Sorteio</h3>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                </div>
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-sm font-semibold mb-2 text-center">3º Sorteio</h3>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                </div>
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fotos & Comentários -->
+                    <div class="flex gap-2 mt-4">
+                        <button class="flex-1 bg-green-400 hover:bg-green-500 text-white text-sm font-semibold py-1 px-2 rounded relative">
+                            Fotos
+                            <span class="absolute -top-1 -right-1 bg-gray-700 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">4</span>
+                        </button>
+                        <button class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 text-sm font-semibold py-1 px-2 rounded relative">
+                            Comentários
+                            <span class="absolute -top-1 -right-1 bg-gray-700 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">7</span>
+                        </button>
+                    </div>
+
+                    <!-- Fotos Gallery -->
+                    <div class="mt-4 px-2">
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Exemplo 1" class="rounded object-cover w-full h-16">
+                            <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" alt="Exemplo 2" class="rounded object-cover w-full h-16">
+                            <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Exemplo 3" class="rounded object-cover w-full h-16">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPremioModal() {
+            document.getElementById('premioModal').classList.remove('hidden');
+        }
+
+        function closePremioModal() {
+            document.getElementById('premioModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
