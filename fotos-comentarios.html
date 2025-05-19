@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="common.css" />
+    <style>
+        .upload-area {
+            border: 2px dashed #cbd5e0;
+            transition: all 0.3s ease;
+            background-color: #f9fafb;
+            cursor: pointer;
+        }
+        .upload-area:hover {
+            border-color: #4a5568;
+            background-color: #edf2f7;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen">
+    <div class="flex min-h-screen">
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Header -->
+            <header class="flex items-center justify-between px-4 py-2 bg-white border-b">
+                <div class="text-sm font-semibold">
+                    Painel <span class="uppercase font-bold">AO VIVO</span>
+                </div>
+                <div class="text-sm font-semibold">
+                    TV: <span class="font-bold">03/04/2025</span> | Usuário: <span class="font-bold">Guido Possi</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button class="bg-red-400 hover:bg-red-500 text-white text-xs font-medium px-3 py-1 rounded">
+                        Finalizar TV de hoje
+                    </button>
+                    <a href="editar-imagens.html" class="bg-blue-500 hover:bg-blue-600 text-white text-xs font-medium px-3 py-1 rounded inline-flex items-center gap-1">
+                        <i class="fas fa-cog mr-1"></i>Configurações
+                    </a>
+                </div>
+            </header>
+
+            <!-- Navigation -->
+            <nav class="flex flex-wrap gap-2 px-4 py-2 bg-white border-b">
+                <a href="index.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Sorteio NF Premiada
+                </a>
+                <a href="premio-bola-maior.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Prêmio Extra
+                </a>
+                <a href="palpite-premiado.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Palpite Premiado
+                </a>
+                <a href="audiencia.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Audiência
+                </a>
+                <a href="fotos-comentarios.html" class="bg-green-400 text-white rounded px-4 py-1.5 text-sm font-semibold hover:bg-green-500">
+                    Fotos / Comentários
+                </a>
+                <a href="sorteios.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Sorteio GRV/GRR/Festão
+                </a>
+                <a href="premiacoes.html" class="bg-gray-300 text-gray-700 rounded px-4 py-1.5 text-sm font-semibold hover:bg-gray-400">
+                    Premiações
+                </a>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="flex-1 p-4 overflow-auto">
+                <div class="content-container content-wrapper">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                    <!-- Photos Section -->
+                    <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-xl font-semibold">Montar Foto</h2>
+                            <span class="text-sm text-gray-500">Fotos montadas p/ hoje: 4</span>
+                        </div>
+                        <hr class="my-6 border-gray-300">
+
+                        <!-- Photo Layout Options -->
+                        <div class="flex justify-center gap-4 mb-6">
+                            <div class="text-center">
+                        <div class="w-16 h-24 bg-gray-200 rounded-lg mb-2 hover:bg-gray-300 transition-colors cursor-pointer"></div>
+                                <span class="text-sm">9x16</span>
+                            </div>
+                            <div class="text-center">
+                        <div class="w-24 h-16 bg-green-500 rounded-lg mb-2 hover:bg-green-600 transition-colors cursor-pointer"></div>
+                                <span class="text-sm">16x9</span>
+                            </div>
+                            <div class="text-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-lg mb-2 hover:bg-gray-300 transition-colors cursor-pointer"></div>
+                                <span class="text-sm">1x1</span>
+                            </div>
+                        </div>
+
+                        <!-- Upload Area -->
+                        <div class="upload-area rounded-lg p-8 mb-6">
+                            <div class="text-center">
+                                <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>
+                                <p class="text-gray-600 mb-2 font-semibold">CLIQUE OU ARRASTE A FOTO</p>
+                            </div>
+                        </div>
+
+                        <!-- Photo Information Form -->
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nome(s):</label>
+                            <input type="text" placeholder="Digite os nomes de todos que aparecem na foto..." 
+                                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Cidade:</label>
+                                    <input type="text" placeholder="Digite a cidade..." 
+                                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">UF:</label>
+                                    <input type="text" placeholder="UF" 
+                                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Revenda:</label>
+                                    <input type="text" placeholder="Digite o nome da revenda/cliente" 
+                                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+                                </div>
+                            </div>
+                        <button class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition-colors">
+                            Enviar
+                        </button>
+                        </div>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-xl font-semibold">Montar Comentário</h2>
+                            <span class="text-sm text-gray-500">Comentários montados p/ hoje: 7</span>
+                        </div>
+
+                        <!-- Comment Form -->
+                        <div class="space-y-4 mb-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Comentário:</label>
+                                <textarea placeholder="Digite o comentário..." 
+                                          class="w-full px-3 py-2 border border-gray-300 rounded-md h-32 resize-none focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Autor:</label>
+                                <input type="text" placeholder="Digite o nome..." 
+                                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+                            </div>
+                        </div>
+
+                        <!-- Comment Preview -->
+                        <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-lg p-6 mb-6">
+                            <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                                <p class="text-gray-700 mb-4 text-center italic text-lg">
+                                    "Comentário comentário comentário comentário comentário
+                                    comentário comentário comentário comentário."
+                                </p>
+                                <p class="text-center font-semibold text-gray-800">José da Silva</p>
+                            </div>
+                        </div>
+
+                        <button class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition-colors">
+                            Enviar
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <div class="right-panel-content">
+                <div class="right-panel-inner">
+                    <div class="flex flex-col space-y-4">
+                        <h2 class="text-sm font-semibold">Painel Exibir: NF Premiada/Extra/Fotos</h2>
+                        <a href="editar-imagens.html" class="btn-edit-bg">
+                            Editar imagens de fundo
+                        </a>
+                    </div>
+
+                    <hr class="my-6 border-gray-300">
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <p class="text-sm mb-2 text-center">Sorteio</p>
+                            <div class="bg-white rounded-lg p-2 text-center">
+                                <div class="grid grid-cols-4 text-4xl font-mono text-orange-500">
+                                    <span>4</span>
+                                    <span>3</span>
+                                    <span>2</span>
+                                    <span>1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm mb-2 text-center">Neutro</p>
+                            <div class="bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg p-2 flex items-center justify-center">
+                                <img src="https://via.placeholder.com/120x60?text=TV+AgRoss" alt="TV AgRoss" class="max-w-full" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sorteio Sections -->
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-sm font-semibold mb-2 text-center">1º Sorteio</h3>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                    <p>Prêmio Centena</p>
+                                </div>
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                    <p>Prêmio Milhar</p>
+                                </div>
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                    <p>Prêmio Extra</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-sm font-semibold mb-2 text-center">2º Sorteio</h3>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                </div>
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-sm font-semibold mb-2 text-center">3º Sorteio</h3>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                </div>
+                                <div class="bg-white p-2 rounded border text-center text-xs">
+                                    <img src="https://via.placeholder.com/80" alt="Premio" class="mx-auto mb-1" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fotos & Comentários -->
+                    <div class="flex gap-2 mt-4">
+                        <button class="flex-1 bg-green-400 hover:bg-green-500 text-white text-sm font-semibold py-1 px-2 rounded relative">
+                            Fotos
+                            <span class="absolute -top-1 -right-1 bg-gray-700 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">4</span>
+                        </button>
+                        <button class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 text-sm font-semibold py-1 px-2 rounded relative">
+                            Comentários
+                            <span class="absolute -top-1 -right-1 bg-gray-700 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">7</span>
+                        </button>
+                    </div>
+
+                    <!-- Fotos Gallery -->
+                    <div class="mt-4 px-2">
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Exemplo 1" class="rounded object-cover w-full h-16">
+                            <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" alt="Exemplo 2" class="rounded object-cover w-full h-16">
+                            <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Exemplo 3" class="rounded object-cover w-full h-16">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
